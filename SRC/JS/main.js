@@ -1,10 +1,4 @@
-var ducks = [
-    
-];
-
-for(var i = 0; i < 100; i++) {
-    ducks.push(new Duck());
-}
+var ducks = [];
 
 // console.log(duck);
 // duck.destroy();
@@ -15,9 +9,6 @@ var scoreCounter = 0;
 
 var hitsHTML = document.getElementById("hits");
 var missHTML = document.getElementById("miss");
-
-hitsHTML.innerHTML = "0 hits";
-missHTML.innerHTML = "0 miss";
 
 function updateGame(hit, id) {
     gameCounter++;
@@ -35,6 +26,28 @@ function updateGame(hit, id) {
 
     if(gameCounter >= 20) {
         console.error("restart");
+        start();
     }
     
 }
+
+function start() {
+    gameCounter = 0;
+    scoreCounter = 0;
+
+    for(var i = 0; i < ducks.length; i++) {
+        ducks[i].destroy();
+    }
+    ducks = [];
+    console.log(ducks);
+    
+    for(var i = 0; i < 100; i++) {
+        ducks.push(new Duck());
+    }
+
+    hitsHTML.innerHTML = "0 hits";
+    missHTML.innerHTML = "0 miss";
+}
+
+
+start();
