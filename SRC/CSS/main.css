@@ -6,9 +6,23 @@ body {
     background-image: url("../Images/stage.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    overflow: hidden;
 }
 
 .duck {
     position: absolute;
     transition: all;
+    width: 125px;
+    height: 125px;
+}
+
+#scoreboard {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: #00000055;
+    padding: 0 2rem;
+    color: #FFFFFF;
 }
