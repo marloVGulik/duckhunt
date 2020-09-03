@@ -7,7 +7,7 @@ class Duck {
     constructor() {
         var body = document.getElementsByTagName("body")[0];
         this.duckPos = new Vec2(screen.width / 2 - 125, screen.height / 2 - 125);
-        console.log(this.duckPos);
+        // console.log(this.duckPos);
 
         do {
             this.duckHTMLId = "Duck" + Math.floor(Math.random() * 1000);
@@ -26,7 +26,7 @@ class Duck {
 
         var updateFun = this.update;
         // this.updateInterval = setInterval(function(duckPos, duckHTML){updateFun(duckPos, duckHTML)}, 15, this.duckPos, this.duckHTML);
-        this.updateInterval = setInterval(function(duck){updateFun(duck)}, 15, this);
+        this.updateInterval = setInterval(function(duck){updateFun(duck)}, 1500, this);
     }
 
     // update(duckPos, duckHTML) {
